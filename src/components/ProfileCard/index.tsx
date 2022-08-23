@@ -14,12 +14,12 @@ import {
   faUpRightFromSquare,
   faUser,
   faUserGroup,
-} from "@fortawesome/free-solid-svg-icons";;
+} from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { IssueContext } from "../../context/IssuesContext";
-  
+
 export function ProfileCard() {
- const {user} = useContext(IssueContext)
+  const { user } = useContext(IssueContext);
 
   return (
     <CardContainer>

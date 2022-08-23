@@ -6,8 +6,6 @@ interface TransactionsProviderProps {
   children: ReactNode;
 }
 
-
-
 interface UserProps {
   name: string;
   avatar_url: string;
@@ -24,7 +22,6 @@ interface PostsProps {
   id: number;
   number: number;
 }
-
 
 interface IssueContextType {
   posts: PostsProps[];
@@ -46,7 +43,6 @@ export function IssuesProvider({ children }: TransactionsProviderProps) {
     bio: "",
     login: "",
   });
-
 
   useEffect(() => {
     api.get("users/rafaelbrun1").then((response) => {
@@ -76,12 +72,8 @@ export function IssuesProvider({ children }: TransactionsProviderProps) {
     SearchIssue(inputValue);
   }, []);
 
- 
-
   return (
-    <IssueContext.Provider
-      value={{ posts, inputValue, SearchIssue, user }}
-    >
+    <IssueContext.Provider value={{ posts, inputValue, SearchIssue, user }}>
       {children}
     </IssueContext.Provider>
   );

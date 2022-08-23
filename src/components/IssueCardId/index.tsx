@@ -46,7 +46,7 @@ export function IssueCardId({ issue }: any) {
             {" "}
             <FontAwesomeIcon icon={faUser} /> {user?.login}
           </ContainerTextInfo>
-          
+
           <ContainerTextInfo>
             {" "}
             <FontAwesomeIcon icon={faComment} /> {issue?.comments} comentários

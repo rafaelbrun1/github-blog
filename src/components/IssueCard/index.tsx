@@ -8,11 +8,10 @@ import {
   TextTitleContainer,
   TitleCard,
 } from "./styles";
-import ptBR from 'date-fns/locale/pt-BR'
-import {formatDistance} from 'date-fns'
+import ptBR from "date-fns/locale/pt-BR";
+import { formatDistance } from "date-fns";
 
 export function IssueCard() {
-  
   const { posts } = useContext(IssueContext);
   return (
     <IssueCardContainer>
@@ -22,10 +21,12 @@ export function IssueCard() {
             <TextTitleContainer>
               <TitleCard>{issue.title}</TitleCard>
 
-              <PostTime>{formatDistance(Date.parse(issue.created_at), new Date(), { 
-                addSuffix: true,
-                locale: ptBR
-              })}</PostTime>
+              <PostTime>
+                {formatDistance(Date.parse(issue.created_at), new Date(), {
+                  addSuffix: true,
+                  locale: ptBR,
+                })}
+              </PostTime>
             </TextTitleContainer>
 
             <IssueDescription>{issue.body}</IssueDescription>
